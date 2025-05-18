@@ -25,7 +25,7 @@ require("lazy").setup(require("nvim-autoloader").autoloadPlugins())
 local autoloaderPath = vim.fn.stdpath "data" .. "/alfamegaxq/nvim-autoloader.nvim"
 if not (vim.uv or vim.loop).fs_stat(autoloaderPath) then
   local autoloaderRepo = "https://github.com/alfamegaxq/nvim-autoloader.git"
-  local out = vim.fn.system { "git", "clone", "--filter=blob:none", "--branch=v0.1.0-alpha", autoloaderRepo, autoloaderPath }
+  local out = vim.fn.system { "git", "clone", "--filter=blob:none", "--branch=v1.0.1", autoloaderRepo, autoloaderPath }
   if vim.v.shell_error ~= 0 then
     error("Error cloning alfamegaxq/nvim-autoloader:\n" .. out)
   end
